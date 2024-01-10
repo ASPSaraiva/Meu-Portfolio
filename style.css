@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #101010;
+    height: 60px;
+    padding: 5px 20px;
+}
+body{
+    background-color: #171717;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.me {
+    text-align: center;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    margin-left: 0;
+    height: 150px;
+}
+
+.red {
+    color: #BE1925;
+    margin-bottom: 5px;
+}
+
+.texteaboutme {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+p{
+    color: white;
+    margin-top: 5px;
+}
+button {
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+    text-decoration: none;
+    background-color: #BE1925;
+    width: 120px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 46px;
+}
+
+button a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/* Adicionando media query para telas menores */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav {
+        margin-top: 10px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .avatar {
+        margin-left: 0;
+        height: 120px;
+    }
+
+    .texteaboutme {
+        width: 100%;
+    }
+
+    .my {
+        margin-top: 10px;
+    }
+}
+
+/* nova midia parte seção 2*/
+
+.work {
+    background-color: #171717;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.cards {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card, .unico {
+    padding: 20px;
+    width: 200px; /* Aumentei um pouco a largura para acomodar melhor o conteúdo */
+    height: auto;
+    color: #BE1925;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza o texto no meio do card */
+}
+
+.unico {
+    background-color: #BE1925;
+    color: aliceblue;
+}
+
+.amostra {
+    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Projetos*/
+
+.projetos {
+    background-color: #101010;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.caps {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que as figuras se movam para a próxima linha em telas menores */
+}
+
+.cap {
+    position: relative;
+    overflow: hidden;
+    width: 350px; /* Largura das figuras */
+    height: 350px; /* Altura das figuras */
+    margin-bottom: 20px; /* Espaçamento entre as figuras */
+}
+
+.cap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cap h4 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.more {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #BE1925;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: none;
+}
+
+.cap:hover .more {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .caps {
+        flex-direction: column; /* Muda para empilhar as figuras verticalmente em telas menores */
+    }
+    .cap {
+        width: 230px ;
+        height: 230px ;
+    }
+}
+
+/* Parte 4*/ 
+
+nav a:hover{
+    color: #BE1925;
+}
+
+.nave{
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #443f3f;
+   padding-top: 30px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #443f3f;
+    padding: 20px; /* Adicionei um pouco de preenchimento para espaçamento */
+}
+
+.final {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px; /* Adicionei margem para espaçamento entre os ícones */
+}
+
+/* Animaço */
+
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink 1s infinite; /* 1s é a duração da animação, e "infinite" faz a animação continuar indefinidamente */
+  }
+
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-2px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    75% {
+      transform: translateX(-2px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .vibrate {
+    animation: vibrate 0.3s infinite; /* 0.3s é a duração da animação, e "infinite" faz a animação continuar indefinidamente */
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  body {
+    animation: fadeIn 2s; /* 2s é a duração da animação */
+  }
+  
