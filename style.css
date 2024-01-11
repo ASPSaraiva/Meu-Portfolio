@@ -125,8 +125,10 @@ button a {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    /* Mantenha quaisquer outras propriedades ou estilos que você já tenha para a classe .work */
-    /* ... */
+}
+
+.diferente{
+    color: #101010;
 }
 .cards {
     gap: 20px;
@@ -240,6 +242,9 @@ button a {
         padding: 20px;
         /* Mantenha quaisquer outras propriedades ou estilos que você já tenha para a classe .work */
         /* ... */
+    }
+    .diferente{
+        color: #ffffff;
     }
 }
 
