@@ -8,9 +8,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #101010;
+    background-color: #161515;
     height: 60px;
     padding: 5px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 body{
     background-color: #171717;
@@ -115,14 +116,18 @@ button a {
 /* nova midia parte seção 2*/
 
 .work {
-    background-color: #171717;
+    background-image: url('https://s3.ap-southeast-1.amazonaws.com/files-scs-prod/public%2Fimages%2F1614907440715-Web+developer+in+Singapore.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    /* Mantenha quaisquer outras propriedades ou estilos que você já tenha para a classe .work */
+    /* ... */
 }
-
 .cards {
     gap: 20px;
     display: flex;
@@ -139,12 +144,14 @@ button a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Centraliza o texto no meio do card */
+    border-radius: 36px;
+    text-align: center; 
 }
 
 .unico {
     background-color: #BE1925;
     color: aliceblue;
+    border-radius: 36px;
 }
 
 .amostra {
@@ -214,11 +221,25 @@ button a {
 
 @media screen and (max-width: 600px) {
     .caps {
-        flex-direction: column; /* Muda para empilhar as figuras verticalmente em telas menores */
+        flex-direction: column; 
     }
     .cap {
         width: 230px ;
         height: 230px ;
+       
+    }
+    .work {
+        background-image: url('https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA%3D%3D');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        /* Mantenha quaisquer outras propriedades ou estilos que você já tenha para a classe .work */
+        /* ... */
     }
 }
 
