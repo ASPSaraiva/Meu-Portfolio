@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #413e40;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.logo1 {
+    width: 65px;
+    height: 65px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #006414    ;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #413e40;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.open {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    nav ul li a {
+        font-size: 23px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover {
+        background: none;
+        color: #006414;
+    }
+}
+
+
+
+/* Site */ 
+
+body {
+    background: #F3ECE4 url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center fixed;
+    background-size: cover;
+    /* Outras propriedades de estilo conforme necessário */
+}
+
+.section1 {
+    background: #121012;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+    align-items: center;
+    justify-content: space-around; /* Distribui o espaço igualmente entre os itens */
+    text-align: start;
+}
+
+span{
+    color: #007500;
+}
+
+.texto {
+    color: #f2f2f2;
+    max-width: 400px; /* Ajuste conforme necessário */
+    padding: 20px; /* Adicione algum espaçamento conforme necessário */
+}
+
+.gif {
+    width: 360px;
+    height: 360px;
+    display: block; /* Exibe o .gif como um bloco por padrão */
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    margin-top: 20px;
+    color: #000000;
+    background: #1f9030;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 16px;
+    transition: 1s;
+}
+
+
+button:hover{
+    transition: 343ms;
+    background: #373234;
+    color: #D84339;
+    cursor: pointer;
+    border: 2px solid #D84339;
+}
+
+/* Estilos específicos para dispositivos móveis (por exemplo, telas menores que 600px) */
+@media (max-width: 600px) {
+    .gif {
+        display: none; /* Esconde o .gif em dispositivos móveis */
+    }
+    .section1 {
+        text-align: center; /* Centraliza o conteúdo em dispositivos móveis */
+    }
+    .section1 .texto {
+        max-width: 100%; /* Garante que o texto ocupe 100% da largura em dispositivos móveis */
+        box-sizing: border-box; /* Mantém o padding dentro do max-width */
+        padding: 20px; /* Adicione algum espaçamento conforme necessário */
+    }
+}
+
+/*  Serviço */
+
+.servicos {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.servicos h1 {
+    margin-top: 25px;
+    
+}
+
+
+.how{
+    color: #0fdd2e;
+    text-shadow: 1px 1px 3px #000000;
+}
+.cards-container {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f2f2f2;
+    border-radius: 10px; /* Reduzi o raio da borda */
+    margin: 5px;
+    padding: 10px;
+    width: calc(40% - 20px); /* 2 cards por linha em versão desktop */
+    text-align: center;
+    box-sizing: border-box; /* Adicionado para garantir que a borda esteja incluída nas dimensões do card */
+}
+
+.card img {
+    border-radius: 10px; /* Reduzi o raio da borda */
+    width: 100%; /* Ocupa 100% da largura do card */
+    max-height: 270px; /* Altura máxima reduzida para acomodar o texto */
+    object-fit: cover; /* Manter a proporção da imagem e cobrir todo o contêiner */
+}
+
+.card p {
+    color: #333; /* Cor do texto */
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Estilos específicos para dispositivos móveis (por exemplo, telas menores que 600px) */
+@media (max-width: 600px) {
+    .card {
+        width: calc(100% - 20px); /* 1 card por linha em versão mobile */
+    }
+    .card img {
+        max-height: 200px; /* Altura máxima reduzida para acomodar o texto em dispositivos móveis */
+    }
+    .servicos h1 {
+        margin-left: 15px;
+    }
+}
+
+/*  Work */
+
+.work {
+    margin-top: 40px;
+    background: #121012;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+    align-items: center;
+    justify-content: space-around; /* Distribui o espaço igualmente entre os itens */
+    text-align: start;
+}
+
+.business {
+    width: 360px;
+    height: 360px;
+    display: block; /* Exibe o .gif como um bloco por padrão */
+}
+
+.texto {
+    padding: 20px;
+}
+
+
+.workp{
+    margin-top: 20px;
+}
+
+h4{
+    margin-top: 15px;
+}
+
+
+
+/* Adaptação para a versão mobile */
+@media (max-width: 600px) {
+    .work {
+        flex-direction: column-reverse; /* Alinha os itens em uma coluna na versão mobile */
+        align-items: flex-start; /* Alinha os itens à esquerda na versão mobile */
+    }
+
+    .business {
+        height: 240px;
+        width: 299px;
+        margin-bottom: 20px; /* Adiciona espaço entre a imagem e o texto na versão mobile */
+    }
+}
+
+.continuacao{
+    color: #f2f2f2;
+    background: #121012;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.flex{
+    display: flex;
+    text-align: start;
+    gap: 30px;
+}
+
+.precovenda {
+    text-decoration: line-through;
+    color: #FF0000; /* Cor da linha vermelha */
+}
+
+@media (max-width: 600px) {
+    .continuacao{
+        padding: 20px;
+        text-align: start;
+        background: #121012;
+        align-items: start;
+        justify-content: start;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .flex{
+        flex-direction: column;
+        display: flex;
+        text-align: start;
+        gap: 30px;
+    }
+}
+
+/* Book */
+
+.bonus{
+    background: #121012;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    padding-top: 40px;
+    padding-right: 80px;
+    gap: 35px;
+}
+
+.book{
+    width: 100px;
+    height: 200px;
+    margin-bottom: 90px;
+}
+
+.chang{
+    margin-top: 20px;
+    color:#D84339;
+    background: #373234;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 16px;
+    transition: 1s;
+
+}
+
+
+.chang:hover{
+    transition: 343ms;
+    color: #F3ECE4;
+    background:  #1f9030;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+}
+
+/* Footer*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.logo-icons {
+    flex: 1 1 200px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icons img {
+    width: 40px; /* Ajuste conforme necessário */
+}
+
+.h3 { /* Alteração aqui */
+    color: rgb(255, 255, 255);
+}
+
+p {
+    margin: 8px 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
